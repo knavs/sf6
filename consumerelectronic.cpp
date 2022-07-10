@@ -3,7 +3,6 @@
 ConsumerElectronic::ConsumerElectronic()
 {
 
-
 }
 
 void ConsumerElectronic::Show() {

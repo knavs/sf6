@@ -19,8 +19,6 @@
  */
 #include <iostream>
 #include <string>
-//#include "notebook.h"
-//#include "fridge.h"
 #include "ielectronic.h"
 #include "fridge.h"
 #include "ipod.h"
@@ -94,7 +92,6 @@ int main()
     eldorado[4] = myi;
 
     // 4. Выбор товара и просмотр его характеристики
-    //std::string wtf = "MP3, FLAC, WAV, OGG, ACC";
     cout << "Вэлкам ту Эльдорадо! " << endl;
 
     bool open = true;
