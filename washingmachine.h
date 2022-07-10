@@ -6,13 +6,13 @@
 class WashingMachine final: public ConsumerElectronic, public Product
 {
 public:
-    WashingMachine();
-    WashingMachine(std::string model, std::string brand, double price, EColor color) :  ConsumerElectronic(color), Product(model, brand, price) {};
+    WashingMachine() = default;
+    WashingMachine(const std::string& model, const std::string& brand, double price, EColor color);
 
-    virtual void Show() override;
+    void Show() override;
+
     bool getDry() const;
     void setDry(bool value);
-
     bool getSpin() const;
     void setSpin(bool value);
 

@@ -12,7 +12,6 @@ enum EColor {
     ORANGE,
     YELLOW,
     PURLPLE
-
 };
 
 enum EClass {
@@ -40,19 +39,25 @@ enum ECableType {
 class ConsumerElectronic : virtual public IElectronic
 {
 public:
-    ConsumerElectronic();
-    ConsumerElectronic(EColor color, EClass eclass = EClass::A, ECableType cable = ECableType::RU)
-        : m_color(color), m_energyClass(eclass), m_cableType(cable) {};
+    ConsumerElectronic() = default;
+    explicit ConsumerElectronic(EColor color, EClass eclass = EClass::A, ECableType cable = ECableType::RU);
+
     void Show() override;
+
     std::string getEnergyClass();
-    std::string getColor();
+    void setEnergyClass(EClass);
+
     std::string getCableType();
+    void setCableType(ECableType);
+
     double getCableLength();
+    void setCableLength(double value);
+
     double getPower();
     void setPower(int power);
-    void setEnergyClass(EClass);
-    void setCableType(ECableType);
-    void setCableLength(double value);
+
+    std::string getColor();
+    void setColor(const EColor &color);
 
 protected:
     EColor m_color;

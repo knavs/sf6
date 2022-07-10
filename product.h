@@ -10,6 +10,7 @@ public:
     Product(const std::string& name, const std::string& brand, double price);
 
     void Show();
+
     std::string getName() const;
     void setName(const std::string&);
     double getPrice() const;

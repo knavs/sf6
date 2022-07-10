@@ -6,11 +6,12 @@
 class Fridge final: public ConsumerElectronic, public Product
 {
 public:
-    Fridge();
-    Fridge(std::string model, std::string brand, double price, EColor color) :  ConsumerElectronic(color), Product(model, brand, price) {};
-    virtual void Show() override;
-    bool getNofrost() const;
+    Fridge() = default;
+    Fridge(const std::string& model, const std::string& brand, double price, EColor color, bool nofrost = true);
 
+    void Show() override;
+
+    bool getNofrost() const;
     void setNofrost(bool value);
 
 private:

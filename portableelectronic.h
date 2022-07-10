@@ -5,16 +5,15 @@
 class PortableElectronic : virtual public IElectronic
 {
 public:
-    PortableElectronic();
-    PortableElectronic(bool accumulator, int battery = 1000, bool charge = false) : m_accumulator(accumulator), m_batteryLife(battery), m_wirelessCharge(charge) {};
+    PortableElectronic() = default;
+    explicit PortableElectronic(bool accumulator, int battery = 1000, bool charge = false);
+
     void Show() override;
 
     int getBatteryLife() const;
     void setBatteryLife(int batteryLife);
-
     bool getWirelessCharge() const;
     void setWirelessCharge(bool wirelessCharge);
-
     void setAccumulator(bool);
     bool getAccumulator() const;
 

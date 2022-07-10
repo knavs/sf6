@@ -1,9 +1,6 @@
 #include "washingmachine.h"
 
-WashingMachine::WashingMachine()
-{
-
-}
+WashingMachine::WashingMachine(const std::string& model, const std::string& brand, double price, EColor color) :  ConsumerElectronic(color), Product(model, brand, price) {}
 
 void WashingMachine::Show()
 {

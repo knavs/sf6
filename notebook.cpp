@@ -1,9 +1,6 @@
 #include "notebook.h"
 
-Notebook::Notebook()
-{
-
-}
+Notebook::Notebook(const std::string& model, const std::string& brand, double price, EColor color) :  PortableElectronic(), ConsumerElectronic(color), Product(model, brand, price) {}
 
 void Notebook::Show()
 {

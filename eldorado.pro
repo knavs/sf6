@@ -23,5 +23,4 @@ HEADERS += \
     pocketbook.h \
     portableelectronic.h \
     product.h \
-    store.h \
     washingmachine.h

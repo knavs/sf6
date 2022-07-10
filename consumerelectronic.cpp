@@ -1,13 +1,10 @@
 #include "consumerelectronic.h"
 
-ConsumerElectronic::ConsumerElectronic()
-{
-
-}
+ConsumerElectronic::ConsumerElectronic(EColor color, EClass eclass, ECableType cable) : m_color(color), m_energyClass(eclass), m_cableType(cable), m_cableLength(1), m_power(1000) {}
 
 void ConsumerElectronic::Show() {
-   std::cout << "÷вет: "          << getColor() << std::endl
-             << "“ип вилки: "     << getCableType() << std::endl
+    std::cout << "÷вет: "          << getColor() << std::endl
+              << "“ип вилки: "     << getCableType() << std::endl
              << "ƒлина кабел€: "   << getCableLength() << " м." << std::endl
              << "ѕотр. мощность: " << getPower() << " ¬т" << std::endl
              << "Ёффективность: "  << getEnergyClass() << std::endl;
@@ -48,6 +45,11 @@ std::string ConsumerElectronic::getColor()
     default:
         return "белый";
     }
+}
+
+void ConsumerElectronic::setColor(const EColor &color)
+{
+    m_color = color;
 }
 
 std::string ConsumerElectronic::getCableType() {

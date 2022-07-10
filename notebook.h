@@ -8,15 +8,15 @@
 class Notebook final: virtual public PortableElectronic, public ConsumerElectronic, public Product
 {
 public:
-    Notebook();
-    Notebook(std::string model, std::string brand, double price, EColor color = EColor::RED) :  PortableElectronic(), ConsumerElectronic(color), Product(model, brand, price) {};
-    virtual void Show() override;
+    Notebook() = default;
+    Notebook(const std::string& model, const std::string& brand, double price, EColor color = EColor::RED);
+
+    void Show() override;
+
     std::string getDiagonal() const;
     void setDiagonal(const std::string &value);
-
     std::string getProcessor() const;
     void setProcessor(const std::string &value);
-
     std::string getVideocard() const;
     void setVideocard(const std::string &value);
 

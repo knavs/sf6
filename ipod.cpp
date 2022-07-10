@@ -1,6 +1,12 @@
 #include "ipod.h"
 #include  <string>
 
+Ipod::Ipod(double price, bool accum, int mah) :  Product("iPod", "Apple", price), PortableElectronic(accum, mah, false), m_supportedFormats("MP3, FLAC, WAV, OGG, ACC") {
+    setWidth(68);
+    setHeight(300);
+    setWeight(88);
+}
+
 void Ipod::Show()
 {
     std::cout << "iPod::Show()" << std::endl;

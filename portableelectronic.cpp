@@ -1,14 +1,11 @@
 #include "portableelectronic.h"
 
-PortableElectronic::PortableElectronic()
-{
-
-}
+PortableElectronic::PortableElectronic(bool accumulator, int battery, bool charge) : m_accumulator(accumulator), m_batteryLife(battery), m_wirelessCharge(charge) {}
 
 void PortableElectronic::Show()
 {
-   std::cout << "Тип питания: " << (getAccumulator() ? "Аккумулятор" : "Батарейки") << std::endl
-             << "Емкость аккумулятора: " << getBatteryLife() << " мА*ч" << std::endl
+    std::cout << "Тип питания: " << (getAccumulator() ? "Аккумулятор" : "Батарейки") << std::endl
+              << "Емкость аккумулятора: " << getBatteryLife() << " мА*ч" << std::endl
              << "Беспроводная зарядка: " << (getWirelessCharge() ? "Да" : "Нет");
 
 }
