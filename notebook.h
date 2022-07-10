@@ -5,6 +5,10 @@
 #include "product.h"
 #include <string>
 
+
+/**
+ * @brief The Notebook class AAAAA
+ */
 class Notebook final: virtual public PortableElectronic, public ConsumerElectronic, public Product
 {
 public:

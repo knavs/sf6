@@ -1,5 +1,13 @@
 #include "notebook.h"
 
+
+/**
+ * @brief Notebook::Notebook asdasd asd asda sd
+ * @param model модель ноутбука
+ * @param brand производитель
+ * @param price цена в руб.
+ * @param color цвет из класса EColor
+ */
 Notebook::Notebook(const std::string& model, const std::string& brand, double price, EColor color) :  PortableElectronic(), ConsumerElectronic(color), Product(model, brand, price) {}
 
 void Notebook::Show()
@@ -9,7 +17,10 @@ void Notebook::Show()
     ConsumerElectronic::Show();
     PortableElectronic::Show();
 }
-
+/**
+ * @brief Notebook::getDiagonal
+ * @return
+ */
 std::string Notebook::getDiagonal() const
 {
     return m_diagonal;

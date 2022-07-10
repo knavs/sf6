@@ -9,7 +9,6 @@ Ipod::Ipod(double price, bool accum, int mah) :  Product("iPod", "Apple", price)
 
 void Ipod::Show()
 {
-    std::cout << "iPod::Show()" << std::endl;
     Product::Show();
     PortableElectronic::Show();
     std::cout << std:: endl << "Поддерживаемые форматы: " << getFormats() << std::endl;

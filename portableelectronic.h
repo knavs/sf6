@@ -2,6 +2,9 @@
 #define PORTABLEELECTRONIC_H
 #include "ielectronic.h"
 
+/**
+ * @brief Базовый класс портативной электрониики
+ */
 class PortableElectronic : virtual public IElectronic
 {
 public:

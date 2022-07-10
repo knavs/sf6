@@ -42,7 +42,7 @@ public:
     ConsumerElectronic() = default;
     explicit ConsumerElectronic(EColor color, EClass eclass = EClass::A, ECableType cable = ECableType::RU);
 
-    void Show() override;
+    virtual void Show() override;
 
     std::string getEnergyClass();
     void setEnergyClass(EClass);
